@@ -1,0 +1,22 @@
+---
+title: "Homework 4"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    code_folding: hide
+---
+
+### Welcome to my Homework 4 website!!
+
+
+![](https://media3.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gif?cid=ecf05e47nyoe60a2vl81m4ls2udizywk3bvn1bejxyoa99m9&rid=giphy.gif)
+
+
+
+[About me](about.html)
+[Resume](resume.html)
+[Dashboard](dashboard.html)
+
+
+

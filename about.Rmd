@@ -10,6 +10,11 @@ output:
 
 Welcome to my very first website (excluding the ones we made in class)! My name is Nidhi, I grew up in Westchester and am very stressed about this election. I have an older sister and a puppy named Nova! I love to play tennis and golf, and championing "Fire Gettleman" and "Houston Asterisks" movements.  
 
+Here's a pic of Nova!!
+
+<img src = "images/nova.jpg" style = "width:40%">
+
+
 
 
   
