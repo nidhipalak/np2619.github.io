@@ -6,7 +6,7 @@ output:
     toc_float: true
 ---
 
-## About me!
+## Resume
 
 
 I earned my BS from The City College of New York and MPH from Mount Sinai.  I currently work at Columbia in research and can't wait to implement R in my workplace. 
