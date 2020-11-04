@@ -15,7 +15,6 @@ output:
 
 
 [About me](about.html)
-[Resume](resume.html)
 [Dashboard](dashboard.html)
 
 
