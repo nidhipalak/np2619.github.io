@@ -39,7 +39,6 @@ violations = rest %>%
           color = ~violation_description, colors = "viridis",
           type = "bar", text = ~wrap) %>%
   layout(showlegend = FALSE,
-    title = 'Top 3 food violations in each borough',
     xaxis = list(title = "borough"),
     yaxis = list(title = "number of violations"))
     
@@ -67,26 +66,21 @@ trend = rest %>%
 trend
 ```
 
+### How do scores align with grades?
 
 ```{r}
-box = rest %>% 
-  #mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
-  plot_ly(y = ~score, x = ~boro, type = "box", color = ~cuisine_description, colors = "viridis")
+boxscore = rest %>% 
+  select(grade, score,cuisine_description) %>% 
+  drop_na(score, grade) %>% 
+  plot_ly(y = ~score, color = ~grade, type = "box", 
+          text = ~cuisine_description, colors = "viridis") %>% 
+  layout(
+    xaxis = list(title = "grade"))
+  
+boxscore
 ```
 
-### Grades by location
 
-```{r}
-inspect = rest %>% 
-  filter(grade %in% c("N", "Z", "P")) %>% 
-  #group_by(grade, inspection_type) %>% 
- #count(grade) %>% 
-plot_ly(x = ~inspection_type, y = ~score,
-        type = "box", color = ~grade, boxpoints = "all")
-  #add_trace(y = ~score)
-
-inspect
-```
 
 ```{r}
 # mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
