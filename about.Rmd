@@ -6,48 +6,120 @@ output:
     toc_float: true
 ---
 
-# About this site
 
-This site is intended for homework 4 of P8105, a class on data science. It was made in RStudio and hosted on github. All the code information can be found by clicking on the github icon on the top right!
-
-
-# Resume
+## Resume
 
 
-## EDUCATION
+### EDUCATION
 
-### Mailman School of Public Health, Columbia University
-Masters in Epidemiology, Expected 2022
+**Mailman School of Public Health, Columbia University** <br>
+*Masters in Epidemiology*, Expected 2022
 
-### Icahn School of Medicine at Mount Sinai
-Masters in Public Health, June 2020
+**Icahn School of Medicine at Mount Sinai**<br>
+*Masters in Public Health*, June 2020 <br>
 Concentration in Global Health
 
-### The City College of New York, New York, NY
-Bachelor of Science, May 2015
+**The City College of New York, New York, NY**<br>
+*Bachelor of Science*, May 2015<br>
 Major in Biochemistry, minor in Studio Art
 
-## Research Experience
+### RESEARCH EXPERIENCE
 
-### Columbia University Medical Center, Jan 2017-Present
-#### Cardiology Core Lab Research Assistant
+**Columbia University Medical Center**, Jan 2017-Present<br>
+*Cardiology Core Lab Research Assistant*<br>
 
+*   Assisting with “Cardiac Parameters of Elite Basketball Players” organizing, collecting and coordinating relevant data from NBA, WNBA and Developmental League
+*   Conducted statistical analysis on NBA, WNBA, Developmental League cardiac data
 
+*Cardiology Clinical Research Coordinator*<br>
 
-My first introduction to public health was an undergrad internship with HealthLeads.  As part of my MPH, I traveled to Uganda to understand and address knowledge gaps in HPV immunizations and cervical cancer screenings. 
+*   Conducting clinical trials on a novel device developed to calculate incentive spirometer usage within the hospital to determine accuracy and effect on patient outcome
+*   Developing a protocol, gathering and organizing data, and statistical analysis
+*   Screening and recruiting possible study participants; complying to all HIPPA regulations
+*   Using results in development of publication
 
-I am an active volunteer. My favorite organizations are [Hole in the Wall Gang Camp](https://www.holeinthewallgang.org/) and [New York City Hemophilia Chapter](https://www.nyhemophilia.org/).
+*Clinical Research Assistant*<br>
 
+*   Testing the accuracy of a new device measuring urine output by weight of foley bag in CCU and CTCU patients
+*   Identified and recruited potential study participants
+*   Analyzed data to determine extrinsic errors and devise solutions to eliminate errors via algorithm
 
-## About me!
+**Nama Wellness Community Centre (NAWEC)**, June-Sept 2019<br>
+*Mount Sinai Global Health Summer*
 
-Welcome to my very first website (excluding the ones we made in class)! My name is Nidhi, I grew up in Westchester and am very stressed about this election. I have an older sister and a puppy named Nova!
+*   Provided structured questionnaires and led education sessions to grasp understanding and awareness of HPV and cervical cancer in rural and urban areas
+*   Shadowed healthcare workers in cervical cancer screenings, ante-natal visits and child vaccination programs at NAWEC
+*   Transitioned NAWEC staff from paper medical records to electronic medical records (EMR)
 
-Here's a pic of Nova!!
+**Health Leads USA**, August 2013-June 2015<br>
+*Program Coordinator*
 
-<img src = "images/nova.jpg" style = "width:40%">
+*   Served the Harlem Hospital community by researching essential goods and services for patients, suffering from health disparities due to lower socioeconomic status
+*   Identified, recruited and enrolled eligible participants and conducted in-person and over the phone intakes and data collection; determined eligibility of participant for programs
+*   Mentored new and veteran interns providing feedbak on their case notes
+*   Pioneered a Welcome Guide for new interns to smoothly assimilate into the program
 
+### PUBLICATIONS AND PRESENTATIONS
 
+*   Sofia Shames, MD; Natalie A. Bello, MD, MPH; Allan Schwartz, MD; Shunichi Homma, MD; **Nidhi Patel, BSc**; Juan Garza, MD; Jonathan H. Kim, MD, MSc; Marci Goolsby, MD; John P. DiFiori, MD4; David J. Engel, MD. Echocardiographic Characterization of Female Professional Basketball Players in the US. JAMA Cardiology. Published online June 24, 2020. 
 
+*   Bhatt, A., Khanna, V., **Patel, N**. Allan Schwartz, A., Shunichi Homma, S., Engel, D.J.  Left Ventricular Global Longitudinal Strain in National Basketball Association Athletes. Journal of the American Society of Echocardiography, Volume 33, Issue 4, 514 – 515
+
+*   Alexander Kushnir, MD, PhD, Eytan Palte, MD, Nadia Morris, BS, Zoha A Shahabuddin, BA, Shikhar Bakhda, BS, Vicky Ro, BA, **Nidhi Patel, BS**, Leana W Wang, MS, Jamie Rolan-Alexander Hall, BS, Xiaoqi Lu, BS, Codruta Chiuzan, PhD, Jana O Christian, BA, Jeffery Hammond, BSN, MSc, NEA-BC, Gregg W. Stone, MD, Sinisa Vukelic, PhD, LeRoy E Rabbani, MD.  Improving fluid output monitoring in the intensive care unit. (In review)
+
+*   **Nidhi Patel, MPH** and Nils Hennig, MD, PhD, MPH. Assess existing awareness of HPV and cervical cancer and whether the population would benefit from education.  (In prep)
+
+*   **Nidhi Patel, MPH** and Nils Hennig, MD, PhD, MPH.. Assess better means of communicating public health information with urban and rural parts of the country. (In prep)
+
+*   **Nidhi Patel, BSc** and Nils Hennig, MD, PhD, MPH. (2019) HPV and cervical cancer education and awareness in Mukono, Uganda. 2020 Mount Sinai Public Health Research Day, virtual. (Poster)
+
+### LEADERSHIP ROLES & COMMUNITY SERVICE
+
+**[New York City Hemophilia Chapter (NYCHC)](https://www.nyhemophilia.org/)**, 2014-Ongoing <br>
+Unite for Bleeding Disorders Walk Committee Member <br>
+NYCHC Gala Committee Member<br>
+Communications Coordinator
+
+**[Hole in the Wall Gang Camp](https://www.holeinthewallgang.org/)**,	2014-Ongoing<br>
+Cabin Counselor<br>
+Weekend Family Pal<br>
+Fall 2020 Welcome Series
+
+**[New York Cares](https://www.newyorkcares.org/)**, 2016-Ongoing<br>
+KEEN New York Volunteer<br>
+Meals on Heals<br>
+Tutoring<br>
+
+**Mount Sinai COVID-19 Task Force**, 2020 <br>
+Volunteer
+
+**[New York Basket Brigade](https://www.nycbasketbrigade.com/)**, 2019<br>
+Volunteer
+
+**Health Leads USA**, 2013-2015<br>
+Program Coordinator<br>
+Intern
+
+**Circle K at The City College of New York**<br>
+President, 2014-2015<br>
+Secretary, 2013-2014
+
+**City Honors illustrious Mentorship Program (CHiMP)**, 2012-2014<br>
+Mentor
+
+**[Save the Gatos](https://www.saveagato.com/)**, Spring 2013<br>
+Volunteer
+
+**[La Fondita de Jesus](https://www.lafonditadejesus.org/en/)**, Spring 2013 <br>
+Volunteer
+
+### INTERESTS
+
+<i class="fas fa-passport"></i> Traveling<br>
+<i class="fas fa-camera-retro"></i> Film Photography<br>
+<i class="fas fa-table-tennis"></i> Tennis <br>
+<i class="fas fa-golf-ball"></i> Golf <br>
+<i class="fas fa-seedling"></i> Gardening<br>
+<i class="fas fa-dice"></i> Rummy <br>
 
   

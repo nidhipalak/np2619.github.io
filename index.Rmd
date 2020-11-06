@@ -9,10 +9,18 @@ output:
 
 ### Welcome to my Homework 4 website!!
 
-
 ![](https://media3.giphy.com/media/XD9o33QG9BoMis7iM4/giphy.gif?cid=ecf05e47nyoe60a2vl81m4ls2udizywk3bvn1bejxyoa99m9&rid=giphy.gif)
 
+<br>
 
+### About this site
+
+This site is intended for homework 4 of P8105, a class on data science. It was made in RStudio and hosted on github. All the code information can be found by clicking on the github icon on the top right!
+
+
+Here's a pic of my puppy, Nova!!
+
+<img src = "images/nova.jpg" style = "width:40%">
 
 [About me](about.html)
 [Dashboard](dashboard.html)
