@@ -18,10 +18,10 @@ library(plotly)
 data("rest_inspec")
 
 rest = rest_inspec %>% 
-  select(camis, action, boro, cuisine_description, dba, score, violation_code, violation_description, zipcode, grade, inspection_type, inspection_date, critical_flag)
+  select(boro, cuisine_description, score, violation_description, zipcode, grade)
 ```
 
-Column {data-width=650}
+Column {data-width=600}
 -----------------------------------------------------------------------
 
 ### Top 3 Food violations by borough
@@ -45,32 +45,27 @@ violations = rest %>%
 violations
 ```
 
-Column {data-width=350}
+Column {data-width=400}
 -----------------------------------------------------------------------
 
-### How some restaurants have trended over time
-
+### How many inspections are done by zipcode?
 ```{r}
-trend = rest %>% 
-    filter(zipcode %in% c("10032"),
-           cuisine_description %in% c("American")) %>%
-  drop_na(score, inspection_date) %>% 
-  group_by(camis, score, inspection_date, dba) %>% 
-  #group_by(camis, cuisine_description),
-  count(camis) %>% 
-  filter(n < 20) %>% 
-  plot_ly(x = ~inspection_date, y = ~score,
-          type = "scatter", mode = "markers",
-          color = ~dba, text = ~dba) %>% 
-    layout(showlegend = FALSE)
-trend
+zip = rest %>% 
+  filter(boro == "MANHATTAN") %>% 
+  mutate(zipcode = as.character(zipcode)) %>% 
+  count(zipcode) %>% 
+  plot_ly(x = ~zipcode, y = ~n, type = "scatter", color = ~n, colors = "viridis") %>% 
+  layout(yaxis = list(title = "number of inspections"))
+
+zip
 ```
+
 
 ### How do scores align with grades?
 
 ```{r}
 boxscore = rest %>% 
-  select(grade, score,cuisine_description) %>% 
+  select(grade, score, cuisine_description) %>% 
   drop_na(score, grade) %>% 
   plot_ly(y = ~score, color = ~grade, type = "box", 
           text = ~cuisine_description, colors = "viridis") %>% 
@@ -79,22 +74,3 @@ boxscore = rest %>%
   
 boxscore
 ```
-
-
-
-```{r}
-# mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
-#  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar", colors = "viridis")
-
-#airbnb %>% 
-#  mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) %>% 
-#  plot_ly(
-#    x = ~lat, y = ~long, color = ~price, text = ~text_label,
-#    alpha  = 0.5,
-#    type = "scatter", mode = "markers")
-```
-
-Avoid dashboard error: 
-1. rebuild website
-2. use direct commandline 
-rmarkdown::render("dashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
