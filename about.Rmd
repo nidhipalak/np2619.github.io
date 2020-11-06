@@ -6,14 +6,33 @@ output:
     toc_float: true
 ---
 
-## About this site
+# About this site
 
 This site is intended for homework 4 of P8105, a class on data science. It was made in RStudio and hosted on github. All the code information can be found by clicking on the github icon on the top right!
 
 
-## Resume
+# Resume
 
-I earned my BS from The City College of New York and MPH from Mount Sinai.  I currently work at Columbia in research and can't wait to implement R in my workplace. 
+
+## EDUCATION
+
+### Mailman School of Public Health, Columbia University
+Masters in Epidemiology, Expected 2022
+
+### Icahn School of Medicine at Mount Sinai
+Masters in Public Health, June 2020
+Concentration in Global Health
+
+### The City College of New York, New York, NY
+Bachelor of Science, May 2015
+Major in Biochemistry, minor in Studio Art
+
+## Research Experience
+
+### Columbia University Medical Center, Jan 2017-Present
+#### Cardiology Core Lab Research Assistant
+
+
 
 My first introduction to public health was an undergrad internship with HealthLeads.  As part of my MPH, I traveled to Uganda to understand and address knowledge gaps in HPV immunizations and cervical cancer screenings. 
 

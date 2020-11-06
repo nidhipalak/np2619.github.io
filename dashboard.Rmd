@@ -15,53 +15,86 @@ library(plotly)
 ```
 
 ```{r}
-data("nyc_airbnb")
+data("rest_inspec")
 
-airbnb = nyc_airbnb %>% 
-  mutate(rating = review_scores_location / 2) %>% 
-  select(neighbourhood_group, neighbourhood, rating, price, room_type, lat, long) %>% 
-  filter(
-    neighbourhood_group == "Manhattan",
-    price %in% 100:500,
-    room_type == "Entire home/apt"
-  ) %>% 
-  drop_na(rating)
+rest = rest_inspec %>% 
+  select(camis, action, boro, cuisine_description, dba, score, violation_code, violation_description, zipcode, grade, inspection_type, inspection_date, critical_flag)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### Top 3 Food violations by borough
 
 ```{r}
-airbnb %>% 
-  mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) %>% 
-  plot_ly(
-    x = ~lat, y = ~long, color = ~price, text = ~text_label,
-    alpha  = 0.5,
-    type = "scatter", mode = "markers")
+violations = rest %>% 
+  filter(boro != "Missing",
+         grade %in% c("A", "B", "C")) %>% 
+  group_by(boro, violation_description) %>% 
+  summarise(n = n()) %>% 
+  mutate(rank = min_rank(desc(n))) %>% 
+  filter(rank < 4) %>% 
+  plot_ly(y = ~n, x = ~boro,
+          color = ~violation_description, 
+          type = "bar", text = ~violation_description) %>% 
+  layout(showlegend = FALSE)
+violations
+#airbnb %>% 
+#  mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) %>% 
+#  plot_ly(
+#    x = ~lat, y = ~long, color = ~price, text = ~text_label,
+#    alpha  = 0.5,
+#    type = "scatter", mode = "markers")
 ```
 
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### How some restaurants have trended over time
 
 ```{r}
-airbnb %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
-  plot_ly(y = ~price, x = ~neighbourhood, color = ~neighbourhood, 
-          type = "box", colors = "viridis")
+trend = rest %>% 
+    filter(zipcode %in% c("10032"),
+           cuisine_description %in% c("American")) %>%
+  drop_na(score, inspection_date) %>% 
+  group_by(camis, score, inspection_date, dba) %>% 
+  #group_by(camis, cuisine_description),
+  count(camis) %>% 
+  filter(n < 20) %>% 
+  plot_ly(x = ~inspection_date, y = ~score,
+          type = "scatter", mode = "markers",
+          color = ~dba, text = ~dba) %>% 
+    layout(showlegend = FALSE)
+trend
 ```
 
-### Chart C
 
 ```{r}
-airbnb %>% 
-  count(neighbourhood) %>% 
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
-  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar", colors = "viridis")
+box = rest %>% 
+  #mutate(neighbourhood = fct_reorder(neighbourhood, price)) %>% 
+  plot_ly(y = ~score, x = ~boro, type = "box", color = ~cuisine_description, colors = "viridis")
 ```
 
+### Grades by location
 
+```{r}
+inspect = rest %>% 
+  filter(grade %in% c("N", "Z", "P")) %>% 
+  #group_by(grade, inspection_type) %>% 
+ #count(grade) %>% 
+plot_ly(x = ~inspection_type, y = ~score,
+        type = "box", color = ~grade, boxpoints = "all")
+  #add_trace(y = ~score)
+
+inspect
+```
+
+```{r}
+# mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
+#  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar", colors = "viridis")
+```
+
+Avoid dashboard error: 
+1. rebuild website
+2. use direct commandline 
 rmarkdown::render("dashboard.Rmd", output_format = "flexdashboard::flex_dashboard")
