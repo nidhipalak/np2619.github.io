@@ -32,19 +32,18 @@ violations = rest %>%
          grade %in% c("A", "B", "C")) %>% 
   group_by(boro, violation_description) %>% 
   summarise(n = n()) %>% 
-  mutate(rank = min_rank(desc(n))) %>% 
+  mutate(rank = min_rank(desc(n)),
+         wrap = stringr::str_wrap(string = violation_description, width = 30)) %>% 
   filter(rank < 4) %>% 
   plot_ly(y = ~n, x = ~boro,
-          color = ~violation_description, 
-          type = "bar", text = ~violation_description) %>% 
-  layout(showlegend = FALSE)
+          color = ~violation_description, colors = "viridis",
+          type = "bar", text = ~wrap) %>%
+  layout(showlegend = FALSE,
+    title = 'Top 3 food violations in each borough',
+    xaxis = list(title = "borough"),
+    yaxis = list(title = "number of violations"))
+    
 violations
-#airbnb %>% 
-#  mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) %>% 
-#  plot_ly(
-#    x = ~lat, y = ~long, color = ~price, text = ~text_label,
-#    alpha  = 0.5,
-#    type = "scatter", mode = "markers")
 ```
 
 Column {data-width=350}
@@ -92,6 +91,13 @@ inspect
 ```{r}
 # mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>% 
 #  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar", colors = "viridis")
+
+#airbnb %>% 
+#  mutate(text_label = str_c("Price: $", price, "\nRating: ", rating)) %>% 
+#  plot_ly(
+#    x = ~lat, y = ~long, color = ~price, text = ~text_label,
+#    alpha  = 0.5,
+#    type = "scatter", mode = "markers")
 ```
 
 Avoid dashboard error: 
